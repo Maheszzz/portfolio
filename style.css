@@ -1,0 +1,567 @@
+:root {
+    --primary-color: rgb(67, 0, 162);
+    --secondary-color: rgb(246, 248, 249);
+    --background-color: #1a1a1a;
+    --text-color: aliceblue;
+    --hover-color: rgb(251, 248, 248);
+    --focus-color: sandybrown;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #000;
+    color: aliceblue;
+    text-align: left; /* Align text to the left */
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.5s, color 0.5s; /* Smooth transition for background and text color */
+    background: linear-gradient(45deg, #000, #000000, #000);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite; /* Background animation */
+}
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bg.png);
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+.container {
+    padding: 5px 5%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo {
+    width: 140px;
+    animation: logoAnimation 3s infinite;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    position: relative;
+    transition: color 0.3s; /* Smooth transition for color */
+}
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: rgb(67, 0, 162);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+nav ul li a:hover {
+    color: rgb(251, 248, 248);
+    text-shadow: #000000;
+    text-decoration-style: solid; /* Change color on hover */
+}
+.header-text {
+    margin-top: 20%;
+    font-size: 20px;
+    text-align: center; /* Center align text */
+    animation: slideInFromLeft 1s ease-in-out, textGlow 2s infinite; /* Slide-in and text glow animation */
+}
+.header-text h1 {
+    font-size: 60px;
+}
+.header-text span {
+    color: rgb(67, 0, 162);
+}
+/* About Section */
+/* About Section */
+#about {
+    padding: 40px 0%;
+    color: rgb(246, 248, 249);
+    text-align: left; /* Align text to the left */
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 {
+    flex-basis: 35%;
+    margin-bottom: 30px;
+}
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.5s; /* Smooth transition for transform */
+}
+.about-col-1 img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+.about-col-2 {
+    flex-basis: 60%;
+    font-size: 14px;
+}
+.sub-title, .tab-titles {
+    font-size: 60px;
+    font-weight: 600;
+    color: silver;
+    margin-bottom: 30px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s; /* Smooth transition for color */
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: rgb(67, 0, 162);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after {
+    width: 30%;
+}
+.tab-links:hover {
+    color: rgb(67, 0, 162); /* Change color on hover */
+}
+.tab-contents {
+    flex-basis: 60%;
+    display: none;
+    margin-top: 20px;
+     /* Center align text */
+}
+.tab-contents.active-tab {
+    display: block;
+}
+.sub-title + .tab-contents ul {
+    list-style: none;
+    position: absolute;
+    top: 1%;
+    right: 0;
+    margin: 10px;
+}
+.tab-contents ul li span {
+    color: rgb(67, 0, 162);   
+    font-size: 14px;
+
+}
+/* Services Section */
+#services {
+    padding: 30px 0;
+    text-align: center; /* Center align text */
+}
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div {
+    background-color: #1a1a1a;
+    padding: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.5s, transform 0.5s;
+    animation: fadeInUp 1s ease-in-out; /* Fade-in-up animation */
+}
+.services-list div:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-10px) rotate(2deg); /* Subtle rotation on hover */
+}
+/* Portfolio Section */
+#portfolio {
+    padding: 50px 0;
+    text-align: center; /* Center align text */
+}
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.work img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    animation: zoomIn 1s ease-in-out; /* Zoom-in animation */
+}
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgb(0, 0, 0, 0.6), #380092);
+    border-radius: 10px;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+}
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a {
+    margin-top: 20px;
+    color: rgb(246, 248, 249);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img {
+    transform: scale(1.1) rotate(-3deg); /* Rotate slightly on hover */
+}
+.work:hover .layer {
+    height: 100%;
+}
+.btn {
+    display: block;
+    margin: 50px auto;
+    padding: 14px 50px;
+    width: fit-content;
+    border: 1px solid rgb(67, 0, 162);
+    border-radius: 6px;
+    text-decoration: none;
+    color: rgb(246, 248, 249);
+    transition: background 0.5s, transform 0.3s; /* Smooth transition for background and transform */
+    animation: pulse 2s infinite; /* Pulse animation */
+}
+/* Ensure the previous rule is properly closed */
+.btn:hover {
+    background-color: rgb(67, 0, 162);
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+.btn:active {
+    background-color: var(--focus-color);
+    transform: scale(0.95); /* Slight zoom-out effect on click */
+}
+.btn.clicked {
+    background-color: grey;
+    animation: none; /* Disable pulse animation when clicked */
+}
+
+/* Contact Section */
+.contact-left {
+    flex-basis: 35%;
+    padding: 50px;
+    text-align: left; /* Align text to the left */
+}
+.contact-right {
+    flex-basis: 50%;
+    padding: 50px;
+    text-align: left; /* Align text to the left */
+}
+.contact-left p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.contact-left p i {
+    color: rgb(67, 0, 162);
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons {
+    margin-top: 30px;
+}
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: rgb(246, 248, 249);
+    display: inline-block;
+    transition: color 0.5s, transform 0.5s;
+}
+.social-icons a:hover {
+    color: rgb(67, 0, 162);
+    transform: translateY(-5px) rotate(360deg); /* Rotate 360 degrees on hover */
+}
+.btn.btn2 {
+    display: inline-block;
+    background: rgb(67, 0, 162);
+}
+.contact-right.form {
+    width: 100%;
+}
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #2d2c2c;
+    padding: 15px;
+    margin: 15px 0;
+    color: rgb(246, 248, 249);
+    font-size: 18px;
+    border-radius: 6px;
+}
+form input:focus, form textarea:focus {
+    border: 1px solid var(--focus-color);
+    background: #3a3a3a;
+}
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.5s, transform 0.3s; /* Smooth transition for background and transform */
+    animation: pulse 2s infinite; /* Pulse animation */
+}
+form .btn2:hover {
+    background-color: rgb(67, 0, 162);
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #1a1a1a;
+    color: rgb(246, 248, 249);
+}
+/* Responsive Design */
+nav .fas {
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(images/phone.png);
+    }
+    .header-text {
+        margin-top: 100px;
+        font-size: 16px;
+    }
+    .header-text h1 {
+        font-size: 30px;
+    }
+    nav .fas {
+        display: block;
+        font-size: 20px;
+        color: aliceblue;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    nav ul {
+        background: rgb(67, 0, 162);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        padding-top: 50px;
+        height: 100vh;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        
+    }
+    .sub-title {
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+        
+    }
+    .about-col-2 {
+        font-size: 14px;
+        
+    }
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 50px 5%;
+    background-color: #1a1a1a;
+    color: aliceblue;
+    text-align: center;
+}
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.testimonial {
+    flex-basis: 30%;
+    background-color: #2d2c2c;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.testimonial h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.testimonial p {
+    font-size: 14px;
+    color: silver;
+}
+#msg {
+    color: var(--focus-color);
+    margin-top: 10px; /* Adjusted positioning */
+    display: block;
+
+}
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Add this to your existing CSS file */
+
+/* Keyframes for logo animation */
+@keyframes logoAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply the animation to the logo */
+.logo {
+    width: 140px;
+    animation: logoAnimation 3s infinite;
+}

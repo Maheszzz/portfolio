@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/57851aa071.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="container"></div>
+            <nav>
+                <img src="images/ptlogo.png" class="logo" alt="Logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Front-end Developer</p>
+                <h1 spellcheck="false">Hi, <span>I'm Maheswaran M</span><br>From Chennai</h1>
+            </div>
+        </div>
+    </header>
+    <!--------------about-->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/photo.png" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Maheswaran M, a passionate frontend developer specializing in Next.js. I love turning ideas into beautiful, functional, and high-performance websites. With hands-on experience in projects like an Amazon clone, chronic disease prediction platform, and QR Pass Generator, I focus on building scalable and user-friendly applications.</p>
+                    <p>My journey began with a Bachelor's degree in Computer Science, followed by a 6-month internship in full-stack development. I'm currently working at UI Networks, where I'm actively self-learning advanced frontend development. I'm excited to collaborate on new projects and contribute to innovative solutions that make a difference.</p>
+                    📍 Dharapuram, Tiruppur | 💻 MacBook Pro M1 | 🐶 Dog lover (Sparky's my buddy!)
+                    <div class="tab-titles">
+                        <button class="tab-links active-link" onclick="openTab(event, 'Skills')">Skills</button>
+                        <button class="tab-links" onclick="openTab(event, 'Experiences')">Experience</button>
+                        <button class="tab-links" onclick="openTab(event, 'Education')">Education</button>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li>
+                                <span>Front-end Developer 🚀</span><br>
+                                Crafting Stunning Web Experiences | Next.js  
+                            </li>
+                            <li>
+                                <span>Front-end Developer 🎨</span><br>
+                                Bringing Ideas to Life with Code | Next.js, React  
+                            </li>
+                            <li>
+                                <span>Front-end Developer 💡</span><br>
+                                Pixel-Perfect & Scalable UI Magic | Next.js, React, Tailwind CSS  
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experiences">
+                        <ul>
+                            <li><span>Front-end Developer</span><br>
+                                Bringing Ideas to Life with Code | Next.js, React <br>
+                                <strong>Experience:</strong> 3 months of hands-on experience in frameworks like Next.js, React, and Tailwind CSS, developing and optimizing interactive UI components  
+                            </li>                                
+                            <li>
+                                <span>Front-end Developer </span><br>
+                                Pixel-Perfect & Scalable UI Magic | Next.js, React, Tailwind CSS <br>
+                                <strong>Experience:</strong> Designed and implemented responsive, high-performance websites  
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li>
+                                <span>Front-end Developer </span><br>
+                                Crafting Stunning Web Experiences | Next.js <br>
+                                <strong>Education:</strong> Bachelor's Degree in Computer Science  
+                            </li>
+                            <li>
+                                <span>Full-Stack Developer </span><br>
+                                Bringing Ideas to Life with Code | HTML, CSS, JavaScript, MongoDB <br>
+                                <strong>Internship:</strong> 6 months of hands-on experience in developing dynamic and scalable web applications  
+                            </li>
+                            <li>
+                                <span>Front-end Developer </span><br>
+                                Pixel-Perfect & Scalable UI Magic | Next.js, React, Tailwind CSS <br>
+                                <strong>Internship:</strong> Currently working at UI Networks and actively self-learning advanced frontend development  
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------service--> 
+    <section id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code" aria-label="Web Development"></i>
+                    <h2>Web Development</h2>
+                    <p>I specialize in building scalable and high-performance web applications using React.js, Next.js, and Tailwind CSS. My focus is on writing clean, maintainable code and implementing best practices for SEO, accessibility, and performance optimization. I ensure seamless API integration, authentication, and data handling while delivering a smooth user experience.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-palette" aria-label="UI/UX Design"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>With a strong eye for design, I craft modern and user-friendly interfaces using Figma. My approach prioritizes accessibility, usability, and aesthetics to enhance user engagement. I create wireframes, prototypes, and design systems to ensure consistency across digital products.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-server" aria-label="Full-Stack Development"></i>
+                    <h2>Full-Stack Development</h2>
+                    <p>While my expertise lies in frontend development, I also have experience in full-stack development, setting up backend services with Node.js and Firebase. I manage databases, authentication, and cloud deployments using platforms like Vercel, Netlify, and AWS to ensure reliable and scalable applications.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------portfolio-->
+    <section id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.png" alt="Amazon Clone">
+                    <div class="layer">
+                        <h3>Amazon Clone</h3>
+                        <p>A fully functional e-commerce website inspired by Amazon, featuring product listings, cart management, and user authentication.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work2.png" alt="QR Pass Generator">
+                    <div class="layer">
+                        <h3>QR Pass Generator</h3>
+                        <p>A smart pass generator system for college out passes, simplifying the approval process with QR-based verification.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.png" alt="Photo Album Project">
+                    <div class="layer">
+                        <h3>Photo Album Project</h3>
+                        <p>A digital album platform that allows users to store, organize, and share their favorite memories seamlessly.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a> 
+        </div>
+    </section>
+    <!-----------------------------contact-->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>maheswaran2527@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>91+ 9790341157</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/mah_eszzz/?next=%2F&hl=en"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/maheswaran42280"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/mahes27/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Maheszzz"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/Mahes - Resume (1).pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="fullName" placeholder="Full Name" required autocomplete="name">
+                        <input type="email" name="email" placeholder="Email" required autocomplete="email">
+                        <textarea name="message" placeholder="Message" required autocomplete="message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Maheswaran M. All Rights Reserved. Unauthorized use or reproduction is prohibited.</p>
+        </div>
+    </section>
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        document.querySelectorAll('.tab-links').forEach(button => {
+            button.addEventListener('click', event => openTab(event, button.getAttribute('onclick').split("'")[1]));
+        });
+
+        function openTab(event, tabName) {
+            document.querySelectorAll('.tab-links').forEach(button => button.classList.remove('active-link'));
+            document.querySelectorAll('.tab-contents').forEach(content => content.classList.remove('active-tab'));
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+
+        document.querySelectorAll('#sidemenu a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        function openMenu() {
+            document.getElementById("sidemenu").style.right = "0";
+        }
+
+        function closeMenu() {
+            document.getElementById("sidemenu").style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzL6U1UGaBLPwfEnOG3jqQUYqyoCImPGeouT04b3Y20G6wwHUJ4EAloSychkXvjlJes/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById('msg');
+  
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Form submitted successfully!";
+                    setTimeout(() => {
+                        msg.innerHTML = "";
+                    }, 1000);
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    msg.innerHTML = "Form submission failed!";
+                    setTimeout(() => {
+                        msg.innerHTML = "";
+                    }, 5000);
+                });
+        });
+    </script>
+</body>
+</html>
